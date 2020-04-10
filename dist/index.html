@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <title>エイリアン</title>
+    <link
+      rel="stylesheet"
+      href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+
+    <style>
+      body {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>
+          エイリアン vs 地球防衛軍
+        </h1>
+      </div>
+      <div id="board-area">
+        <img id="board" src="./chessboard.png">
+        <div class="koma" id="alien"><img src="./alien.png"></div>
+        <div class="koma" id="yellow"><img src="./defender.png"></div>
+      </div>
+      <div>
+        <button id="button" type="button" class="btn btn-primary">移動!</button>
+        <div id="message"></div>
+      </div>
+      </body>
+</html>

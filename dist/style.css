@@ -1,0 +1,35 @@
+.container {
+  text-align: center;
+}
+
+#board-area {
+  position: relative;
+  text-align: center;
+}
+
+#board-area #board {
+  border: 0;
+  width: 500px;
+  height: 500px;
+}
+
+#board-area .koma {
+  position: absolute;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 57.8px;
+  height: 57.8px;
+}
+
+#button {
+  width: 50%;
+  margin: 20px 0;
+}
+
+#message {
+  position: relative;
+  height: 200px;
+  width: 50%;
+  border: 1px sold #ccc;
+}
