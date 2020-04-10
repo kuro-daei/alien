@@ -5,8 +5,7 @@ class Yellow {
   }
 
   move() {
-    this.x = this.x + 1;
-    this.board.locate(this);
+    this.board.move(this, 1, 0);
   }
 
   rival(alien){
@@ -14,4 +13,4 @@ class Yellow {
   }
 }
 
-export default Yellow;
+export { Yellow };

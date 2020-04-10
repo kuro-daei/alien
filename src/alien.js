@@ -5,8 +5,7 @@ class Alien {
     }
   
     move() {
-      this.y = this.y + 1;
-      this.board.locate(this);
+      this.board.move(this, -1, 0);
     }
 
     rival(yellow){
@@ -14,5 +13,5 @@ class Alien {
     }
   }
   
-  export default Alien;
+  export { Alien };
   
