@@ -28,7 +28,7 @@ class Game {
       alien.move();
       if (yellow.x == alien.x && yellow.y == alien.y) {
         message.innerText = '地球防衛軍にエイリアンが捕まりました。';
-        this.button.disabled = true;
+        button.disabled = true;
       }
     });
   }
