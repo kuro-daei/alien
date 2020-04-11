@@ -2,10 +2,13 @@ class Alien {
     constructor(elm, board) {
       this.elm = elm;
       this.board = board;
+      this.x;
+      this.y;
     }
   
     move() {
-      this.board.move(this, -1, 0);
+      console.log(`エイリアン - ${this.x}, ${this.y}`);
+      this.board.move(this, 0, 0);
     }
 
     rival(yellow){

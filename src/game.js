@@ -9,8 +9,8 @@ class Game {
     const yellow = new Yellow(document.getElementById("yellow"), board);
 
     alien.x = 7;
-    alien.y = 4;
-    yellow.x = 1;
+    alien.y = 3;
+    yellow.x = 4;
     yellow.y = 4;
 
     alien.rival(yellow);
