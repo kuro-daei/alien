@@ -4,11 +4,15 @@ class Yellow {
     this.board = board;
     this.x;
     this.y;
+    this.dx = -1;
   }
 
-  move() {
+  move(key) {
     console.log(`地球防衛軍 - ${this.x}, ${this.y}`);
-    this.board.move(this, -1, 0);
+    if( this.x == 1 || this.x == 8 ){
+      this.dx = this.dx * -1;
+    }
+    this.board.move(this, this.dx, 0);
   }
 
   rival(alien) {

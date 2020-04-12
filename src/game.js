@@ -7,30 +7,40 @@ class Game {
     const board = new Board(document.getElementById("board"));
     const alien = new Alien(document.getElementById("alien"), board);
     const yellow = new Yellow(document.getElementById("yellow"), board);
-
-    alien.x = 7;
-    alien.y = 3;
-    yellow.x = 4;
-    yellow.y = 4;
+    const tern = document.getElementById("tern");
+    let i = 0;
 
     alien.rival(yellow);
     yellow.rival(alien);
 
-    board.locate(alien);
-    board.locate(yellow);
+    function showTern(){
+      tern.innerText = `ターン : ${i}`;
+    }
 
-    const messge = document.getElementById("message");
-    message.innerText = "スタート!";
+    function init(){
+      alien.x = 7;
+      alien.y = 3;
+      yellow.x = 4;
+      yellow.y = 3;
+      board.locate(alien);
+      board.locate(yellow);
+      i = 0;
+      showTern();
+    }
 
-    const button = document.getElementById("button");
-    button.addEventListener("click", () => {
-      yellow.move();
+    init();
+
+    document.addEventListener('keyup', (event) => {
+      console.log(`KEY : ${event.key}`);
+      yellow.move(event.key);
       alien.move();
       if (yellow.x == alien.x && yellow.y == alien.y) {
-        message.innerText = '地球防衛軍にエイリアンが捕まりました。';
-        button.disabled = true;
+        alert('地球防衛軍にエイリアンが捕まりました。');
+        init();
       }
-    });
+      i = i + 1;
+      showTern();
+    }, false);
   }
 }
 
